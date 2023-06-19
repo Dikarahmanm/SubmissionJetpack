@@ -1,5 +1,6 @@
 package com.dika.starrail.ui.screen.detail
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -25,10 +26,12 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import androidx.navigation.compose.rememberNavController
 import coil.compose.AsyncImage
 
 import com.dika.starrail.data.local.CharacterEntity
@@ -56,9 +59,7 @@ fun DetailScreen(CharacterId: Int, navController: NavController, scaffoldState: 
             }
         }
     }
-}
-
-@Composable
+}@Composable
 fun DetailContent(
     Character: CharacterEntity,
     navController: NavController,
@@ -66,7 +67,7 @@ fun DetailContent(
     onUpdateFavoriteCharacter: (id: Int, isFavorite: Boolean) -> Unit,
 ) {
     val coroutineScope = rememberCoroutineScope()
-    val (id, name, description, location, photoUrl, rating, user, isFavorite) = Character
+    val (id, name, description, location, photoUrl, rating, path, isFavorite) = Character
 
     Box(modifier = Modifier.fillMaxWidth()) {
         Column(
@@ -84,11 +85,15 @@ fun DetailContent(
                         .fillMaxWidth()
                         .height(300.dp)
                 )
-
+                Image(
+                    painter = painterResource(id = path),
+                    contentDescription = null,
+                    modifier = Modifier.size(48.dp).align(Alignment.BottomEnd).padding(end = 10.dp),// Occupy the entire Box
+                )
                 Box(
                     modifier = Modifier
                         .clip(RoundedCornerShape(topEnd = 8.dp))
-                        .background(MaterialTheme.colors.primaryVariant)
+                        .background(androidx.compose.material3.MaterialTheme.colorScheme.primary,)
                         .align(Alignment.BottomStart),
                 ) {
                     Row(
@@ -140,19 +145,17 @@ fun DetailContent(
                 }
 
                 Row(verticalAlignment = Alignment.CenterVertically) {
-                    val nStar = countStar(rating)
-                    repeat(nStar) {
-                        Icon(
+                    val nstar = rating.toInt()
+                    repeat(nstar) {
+                        androidx.compose.material3.Icon(
                             imageVector = Icons.Rounded.Star,
-                            contentDescription = name,
-                            tint = Color(0xFFFFCC00)
+                            contentDescription = null,
+                            tint = Color(0xFFE5C558),
+                            modifier = Modifier.size(32.dp)
                         )
                     }
-                    Spacer(modifier = Modifier.width(4.dp))
-                    Text(
-                        text = "$rating/10 (${compactDecimalFormat(user)} reviews)",
-                        style = MaterialTheme.typography.body2
-                    )
+                    Spacer(modifier = Modifier.width(8.dp))
+
                 }
 
                 Spacer(modifier = Modifier.height(16.dp))
@@ -162,6 +165,12 @@ fun DetailContent(
                     style = MaterialTheme.typography.body1,
                     lineHeight = 24.sp,
                 )
+
+                Spacer(modifier = Modifier.height(16.dp)) // Tambahkan spacer untuk memisahkan deskripsi dengan elemen berikutnya
+
+                Divider(color = MaterialTheme.colors.onSurface, modifier = Modifier.padding(vertical = 8.dp)) // Tambahkan garis pemisah
+
+                // Tambahkan elemen lain sesuai kebutuhan, misalnya text, spacer, atau box
             }
         }
 
@@ -172,7 +181,6 @@ fun DetailContent(
                 .align(Alignment.TopStart)
                 .clip(CircleShape)
                 .size(40.dp)
-                .testTag("back_button")
                 .background(Color.White)
         ) {
             Icon(
@@ -182,3 +190,5 @@ fun DetailContent(
         }
     }
 }
+
+

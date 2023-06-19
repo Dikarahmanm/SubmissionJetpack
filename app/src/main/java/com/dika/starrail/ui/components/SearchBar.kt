@@ -1,5 +1,3 @@
-package com.dika.starrail.ui.components
-
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.heightIn
@@ -8,6 +6,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Clear
 import androidx.compose.material.icons.rounded.Search
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalFocusManager
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
@@ -18,9 +17,12 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.TextField
 import androidx.compose.material3.TextFieldDefaults
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.draw.shadow
+import androidx.compose.material3.Text
+import androidx.compose.material3.contentColorFor
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.compositeOver
+import androidx.compose.ui.graphics.luminance
+import androidx.compose.ui.unit.sp
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -30,6 +32,10 @@ fun SearchBar(
     modifier: Modifier = Modifier
 ) {
     val focusManager = LocalFocusManager.current
+
+    val backgroundColor = Color.Transparent
+    val contentColor = contentColorFor(backgroundColor)
+    val placeholderColor = contentColor.copy(alpha = 0.6f)
 
     TextField(
         value = query,
@@ -42,14 +48,19 @@ fun SearchBar(
             )
         },
         singleLine = true,
-        shape = RoundedCornerShape(50),
+        shape = RoundedCornerShape(60),
         colors = TextFieldDefaults.textFieldColors(
             disabledIndicatorColor = Color.Transparent,
             focusedIndicatorColor = Color.Transparent,
-            unfocusedIndicatorColor = Color.Transparent
+            unfocusedIndicatorColor = Color.Transparent,
+            placeholderColor = placeholderColor
         ),
         placeholder = {
-            androidx.compose.material3.Text(stringResource(R.string.searchbar_placeholder))
+            Text(
+                text = stringResource(R.string.searchbar_placeholder),
+                color = placeholderColor,
+                fontSize = 16.sp
+            )
         },
         trailingIcon = {
             if (query.isNotEmpty()) {
@@ -67,8 +78,7 @@ fun SearchBar(
         modifier = modifier
             .padding(16.dp)
             .fillMaxWidth()
-            .background(Color.Transparent)
             .heightIn(min = 36.dp)
-            .shadow(56.dp)
+            .background(backgroundColor)
     )
 }

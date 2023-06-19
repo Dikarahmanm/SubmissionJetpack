@@ -1,5 +1,6 @@
 package com.dika.starrail.ui.screen.home
 
+import SearchBar
 import androidx.compose.foundation.layout.Column
 import androidx.compose.material.ScaffoldState
 import androidx.compose.runtime.Composable
@@ -13,7 +14,6 @@ import com.dika.starrail.ui.components.AvailableContent
 import com.dika.starrail.ui.components.CustomEmptyContent
 import com.dika.starrail.ui.components.CustomErrorContent
 import com.dika.starrail.ui.components.CustomLoadingIndicator
-import com.dika.starrail.ui.components.SearchBar
 
 @Composable
 fun HomeScreen(navController: NavController, scaffoldState: ScaffoldState) {

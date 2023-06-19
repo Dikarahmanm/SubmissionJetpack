@@ -1,100 +1,98 @@
-package com.dicoding.gotrip.utils
+package com.dika.starrail.utils
 
+import com.dika.starrail.R
 import com.dika.starrail.data.local.CharacterEntity
 
 object CharacterData {
     val dummy = listOf(
         CharacterEntity(
-            name = "Borobudur",
-            description = "The ancient temple, Borobudur is the most tradionaly important landmarks in Indonesia. The temple was built in the 8th century. It was built in the structure of a traditional Buddhist mandala. Being considered the greatest Buddhist site in the world, Borobudur is one of the top UNESCO World Heritage sites. "
-                    + "\n\n" +
-                    "This historic temple was forgotten for centuries when the population moved to eastern Java due to the massive volcanic eruptions. It was rediscovered in the 1800s and presently, main attraction sites. Borobudur lies nearby Yogyakarta, an old Javanese city popular for its historical offerings and rich culture. Visit the temple at sunrise for brief hiking and experience the breathtaking view of the temple being bathed in golden light.",
-            location = "Central Java",
-            photoUrl = "https://cdn.pixabay.com/photo/2017/06/23/10/15/temple-2434193_1280.jpg",
-            rating = 6.2,
-            user = 120,
+            name = "Arlan",
+            description = "The head of Herta Space Station's Security Department. This quiet boy hopes to protect the researchers who value their pursuit of knowledge, and to help them to complete their work.",
+            location = "Herta Space Station",
+            photoUrl = (R.drawable.arlan),
+            rating = "4",
+            path = (R.drawable.destruc),
         ),
         CharacterEntity(
-            name = "Gili Islands",
-            description = "Lombok is a popular tourist destination in Indonesia. The Gili Islands is a cluster of three islands named Gili Meno, Gili Trawangan, and Gili Air. Take a note, the name “Gili Islands” is superfluous as Gili means “small island” in Sasak. You will find several islands across the coast of Lombok which has Gili in their names. "
-                    + "\n\n" +
-                    "The Gili Islands are a serious attraction site in Lombok, which has risen in popularity among backpackers and tourists over the years. The island is quite picturesque with beautiful beaches like Bali. The islands also provide the chance of snorkeling and diving at the turtle sanctuary. If you are looking for more turtle action, you’ll try a turtle hatchery where many of these creatures are born annually. Kayaking is another popular activity to do in Gili Islands. It helps to reconnect your body and mind. There are also many options for free yoga classes. The Gili Islands has a more relaxed environment as compared to Bali.",
-            location = "Lombok",
-            photoUrl = "https://cdn.pixabay.com/photo/2017/11/14/18/27/island-2949520_1280.jpg",
-            rating = 8.9,
-            user = 3100,
+            name = "Kafka",
+            description = "A member of the Stellaron Hunters. A dashing, collected, and professional beauty. Used the enchantment of Spirit Whisper to set up Trailblazer to absorb the Stellaron. Her hobby is shopping for and organizing her collection of coats.",
+            location = "Stellaron Hunters",
+            photoUrl = (R.drawable.kafka),
+            rating = "5",
+            path = (R.drawable.nihility),
         ),
         CharacterEntity(
-            name = "Bunaken",
-            description = "Bunaken is one of the most famous dive spots and snorkeling areas. It is situated the north of the island of Sulawesi. The best time for visiting Bunaken for diving is around April and November. This island is apert of the Bunaken Marine Park, so you can see more than 70% of the fish species, living in the western Pacific Ocean.",
-            location = "Sulawesi",
-            photoUrl = "https://cdn.pixabay.com/photo/2017/05/23/11/07/mandarinfish-2336895_1280.jpg",
-            rating = 4.0,
-            user = 230,
+            name = "Blade",
+            description = "A member of the Stellaron Hunters, whose real name is unknown. Blade wields an ancient sword that has filled with cracks, just like his body and his mind.",
+            location = "Stellaron Hunters",
+            photoUrl = (R.drawable.blade),
+            rating = "5",
+            path = (R.drawable.destruc),
         ),
         CharacterEntity(
-            name = "Sacred Monkey Forest",
-            description = "Ubud is that the cultural heart of Bali, and it’s here you will find the Sacred Monkey Forest, a serene space where you’ll be able to feel the traditional majesty of the island. At this Hindu temple, you will see many long-tailed macaques, a species of monkey commonly seen throughout a geographical area. The temple also makes a stimulating visit because Balinese Hinduism combines aspects of several different religions, making it unique among other forms of Hinduism practiced today.",
-            location = "Ubud",
-            photoUrl = "https://cdn.pixabay.com/photo/2019/07/03/01/54/monkey-4313437_1280.jpg",
-            rating = 5.0,
-            user = 1230,
+            name = "Silver Wolf",
+            description = "Silver Wolf is a petite young woman who loosely resembles Bronya in terms of appearance. She wears a short, black coat along with a crop-top which covers the upper part of her body, exposing her navel.",
+            location = "Stellaron Hunters",
+            photoUrl = (R.drawable.silverwolf),
+            rating = "5",
+            path = (R.drawable.nihility),
         ),
         CharacterEntity(
-            name = "Jatiluwih Rice Fields",
-            description = "Bali isn’t just about the white sand beaches. Jatiluwih Rice fields in Bali are famous tourist destinations. The lush green and breath-taking terraces of the Jatiluwih rice fields are a designated UNESCO Cultural Landscape. It is also a part of the Subak System of Bali. The scrupulously irrigated and cultivated fields are proof of the rich natural resources in Bali. It is carefully carved by the skills of the local farmers. If you didn’t visit the rice field, your trip would remain incomplete.",
-            location = "Tabanan",
-            photoUrl = "https://cdn.pixabay.com/photo/2016/07/13/10/56/rice-1514141_1280.jpg",
-            rating = 7.3,
-            user = 100,
+            name = "Luocha",
+            description = "A blond-haired handsome young man who carries a coffin on his back.\n" +
+                    "As a member of the intergalactic merchant guild, he was unfortunately caught in the Xianzhou Luofu's Stellaron crisis.\n" +
+                    "Somehow, his superb medical skills are sure to be of use. ",
+            location = "Xianzhou Luofu",
+            photoUrl = (R.drawable.luocha),
+            rating = "5",
+            path = (R.drawable.abundance),
         ),
         CharacterEntity(
-            name = "Mount Bromo",
-            description = "Indonesia sits on the Ring of the fireplace, a locality with a few of the foremost active volcanoes within the world. Other country volcanoes like Mt. Merapi are quite famous for violent eruptions. It is a spectacular and strenuous beauty." +
+            name = "Asta",
+            description = "The lead researcher of Herta Space Station and a lady from a renowned family. She's an astronomer overflowing with curiosity, and excels at managing the disparate staff of the space station.",
+            location = "Hertha Space Station",
+            photoUrl =(R.drawable.asta),
+            rating = "4",
+            path = (R.drawable.harmony),
+        ),
+        CharacterEntity(
+            name = "Gepard",
+            description = "A captain in the Silvermane Guards and an outstanding warrior of Belobog. He is meticulous and vigilant to the core and is always true to himself.",
+            location = "Jarilo-VI",
+            photoUrl = (R.drawable.gepard),
+            rating = "5",
+            path = (R.drawable.preservation),
+        ),
+        CharacterEntity(
+            name = "Jing Yuan",
+            description = "He is one of the seven Arbiter-Generals of the Xianzhou Alliance Cloud Knights, and one of the Six Charioteers of the Xianzhou Luofu. Although he appears lazy, Jing Yuan has been a general on the Luofu for centuries, an amount of time exceeding most of his peers. This can be attributed to his wisdom and attention to routine measures, with Jing Yuan preferring to be preventive rather than corrective." + "\n \n" +
+                    "The Divine Foresight, one of the Seven Arbiter-Generals. Although his appearance may be one of indolence, the Cloud Knight general who commands the Xianzhou Luofu is more meticulous than seemingly meets the eye.\n" +
+                    "He does not consider saving a situation from the brink of disaster to be a show of wisdom, and is thus fastidious with routine affairs to avoid any potential problems.\n" +
+                    "Due to his careful management, the Xianzhou have enjoyed many years of peace, with Jing Yuan's seemingly lazy demeanor having earned him the moniker of \"Dozing General.\"",
+            location = "Xianzhou Luofu",
+            photoUrl = (R.drawable.jingyuan),
+            rating = "5",
+            path = (R.drawable.erudition),
+        ),
+        CharacterEntity(
+            name = "Seele",
+            description = "A resident of the Underworld and the backbone of Wildfire. She goes by the alias \"Babochka.\" She has a frank personality, but there is a delicate and sensitive hidden side to her deep in her heart." +
                     "\n\n" +
-                    "Mount Bromo is one of the most beautiful active volcanic mountains due to the incredible views, standing on the caldera during sunrise. The peak of Mt Bromo was blown off in a volcanic eruption. You will still see the white smoke crawling from the mountain. The volcano is an element of Bromo Tengger Semeru parkland, which also includes Mount Semeru, the very best peak in Java. It is home to the Tengger people, an insular ethnos whose race travels back to the ancestry of the old Majapahit empire.",
-            location = "East Java",
-            photoUrl = "https://cdn.pixabay.com/photo/2018/10/03/19/05/mount-3722183_1280.jpg",
-            rating = 9.6,
-            user = 1200,
+                    "Seele is a young woman with long purple hair and light purple eyes. She wears a purple scarf with red and white details, as well as a white, black and purple outfit with black shorts. On her left arm is a red band tied together with a purple sleeve, and on her right a fingerless glove that goes up to her elbow. She also wears a pair of black and blue boots of different lengths.",
+            location = "Belobog",
+            photoUrl = (R.drawable.seele),
+            rating = "5",
+            path = (R.drawable.hunt),
         ),
         CharacterEntity(
-            name = "Raja Ampat",
-            description = "The fairyland of lush, cone-shaped islands set against blue and turquoise waters is one of all Indonesia’s most spectacular sights. many islands and cays structure this tropical paradise, but the wonder extends beneath the surface likewise. Colorful fish and various forms of marine life thrive within the warm, clear waters. In fact, the coral reefs here are several the foremost biodiverse in the world, making it a well-liked area for diving in Indonesia.",
-            location = "West Papua",
-            photoUrl = "https://cdn.pixabay.com/photo/2019/02/11/14/07/raja-ampat-3989741_1280.jpg",
-            rating = 5.1,
-            user = 1230,
-        ),
-        CharacterEntity(
-            name = "Pura Tanah Lot",
-            description = "Who hadn’t heard about Pura Tanah Lot? It is one of the most famous temples in Bali. Constructed on the rock formation in the sea. The original structure deteriorated so a few parts are now artificial stones. Pura Tanah Lot brings more people, especially to watch the sunset." +
+            name = "Bronya",
+            description = "Heir apparent to the Supreme Guardian of Belobog. She possesses pride befitting of a princess, but also the determination and integrity of a soldier." +
                     "\n\n" +
-                    "The temple is located on the southern coast of Beraban village. You can even walk around the temple at low tide. After witnessing the magical sunset, take a stroll at Tanah Lot market. Purchase rare Balinese souvenirs.",
-            location = "Tabanan",
-            photoUrl = "https://cdn.pixabay.com/photo/2016/02/25/18/15/indonesia-1222597_1280.jpg",
-            rating = 8.1,
-            user = 3000,
-        ),
-        CharacterEntity(
-            name = "Lake Toba",
-            description = "Lake Toba is another natural wonder of Indonesia. Why? Cause it is both a body of water and a supervolcano. The lake, which sits in an exceeding crater, was formed between 69,000 and 77,000 years ago and is believed to possess been the results of a catastrophic eruption." +
-                    "\n\n" +
-                    "The lake Toab is 1,145 square kilometers and 450 meters deep-seated. Regular volcanic activity is recorded in this lake. The Lake Toab pushed many lands above the water’s surface. Lake Toba may be a study in beauty and the powerful forces at work on the earth. Here, you’ll be able to go swimming, water skiing, canoeing, or fishing, or persist with wandering the encircling area on foot or bike.",
-            location = "Sumatera",
-            photoUrl = "https://cdn.pixabay.com/photo/2016/12/09/11/51/lake-toba-1894746_1280.jpg",
-            rating = 3.1,
-            user = 323,
-        ),
-        CharacterEntity(
-            name = "Komodo parkland",
-            description = "Who didn’t dream of seeing a dragon, even a miniature one? The komodos of Indonesia aren’t any mythical creatures, however, they’re fierce and deadly animals. Komodo park, a UNESCO World Heritage site, encompasses five main islands and a variety of smaller ones, furthermore because of the surrounding marine areas. The water from these islands is the most diverse and richest in the world." +
-                    "\n\n" +
-                    "Although the star of the show is Komodo dragons, while visiting the park; yet tourists also go on snorkeling, hiking, canoeing, or travel to the small villages on the islands. Another highlight is Pink Beach on Komodo Island. This pink beach is one of the most stunning and the highest beaches in Indonesia. Visitors must arrive by boat to the islands, and there’s an admission price plus additional costs for transportation, guide services, and other activities.",
-            location = "Nusa Tenggara",
-            photoUrl = "https://cdn.pixabay.com/photo/2014/01/02/19/51/komodo-dragon-237805_1280.jpg",
-            rating = 7.1,
-            user = 100,
+                    "Bronya is a young woman with long gray hair and matching gray eyes. She wears a short white dress with blue and gold details, along with two purple and blue earrings, thigh high black boots, and translucent gloves. She has a blue and black hair tie, and wears a golden symbol on her left breast that has the appearance of a mask.",
+            location = "Jarilo-VI",
+            photoUrl = (R.drawable.bronya),
+            rating = "5",
+            path = (R.drawable.harmony)
         ),
     )
 }

@@ -10,8 +10,8 @@ data class CharacterEntity(
     val name: String,
     val description: String,
     val location: String,
-    val photoUrl: String,
-    val rating: Double,
-    val user: Int,
+    val photoUrl: Int,
+    val rating: String,
+    val path: Int,
     var isFavorite: Boolean = false,
 )

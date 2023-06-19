@@ -5,7 +5,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.dika.starrail.data.local.CharacterEntity
-import com.dicoding.gotrip.utils.CharacterData
+import com.dika.starrail.utils.CharacterData
 import com.dicoding.gotrip.utils.UiState
 import com.dika.starrail.data.repository.Repository
 import dagger.hilt.android.lifecycle.HiltViewModel
